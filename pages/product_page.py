@@ -13,13 +13,11 @@ class ProductPage(BasePage):
         self.should_be_same_price_in_the_basket()
 
     def should_be_same_product_in_the_basket(self):
-        #time.sleep(30)
+        basket_name = self.browser.find_element(*ProductPageLocators.BASKET_NAME)
         name = self.browser.find_element(*ProductPageLocators.PROD_NAME)
-        basket_name = name
-        assert name == basket_name, "Name of the product is not equal to the name in the basket"
+        assert name.text == basket_name.text, "Name of the product is not equal to the name in the basket"
 
     def should_be_same_price_in_the_basket(self):
-        #time.sleep(30)
         price = self.browser.find_element(*ProductPageLocators.PROD_PRICE)
-        basket_price = price
-        assert price == basket_price, "Price of the product is not equal to the price in the basket"
+        basket_price = self.browser.find_element(*ProductPageLocators.BASKET_PRICE)
+        assert price.text == basket_price.text, "Price of the product is not equal to the price in the basket"
