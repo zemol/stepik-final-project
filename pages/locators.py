@@ -12,4 +12,8 @@ class LoginPageLocators():
     REG_PASS1 = (By.CSS_SELECTOR, "#id_registration-password1")
     REG_PASS2 = (By.CSS_SELECTOR, "#id_registration-password2")
     REG_SUBMIT = (By.NAME, "registration_submit")
-    
+
+class ProductPageLocators():
+    PROD_ADD = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
+    PROD_NAME = (By.CSS_SELECTOR, "#messages .alert-success .alertinner strong")
+    PROD_PRICE = (By.CSS_SELECTOR, "#messages .alert-info .alertinner p strong")
