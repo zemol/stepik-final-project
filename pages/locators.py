@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
 
 class MainPageLocators():
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    #LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    pass
 
 class LoginPageLocators():
     LOGIN_EMAIL = (By.CSS_SELECTOR, "#id_login-username")
@@ -19,3 +20,7 @@ class ProductPageLocators():
     BASKET_PRICE = (By.CSS_SELECTOR, "#messages .alert-info .alertinner p strong")
     PROD_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PROD_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
